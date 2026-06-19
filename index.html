@@ -125,6 +125,20 @@
     font-family:var(--f-mono); font-size:.85rem; color:var(--muted);
     background:rgba(255,255,255,.6);
   }
+  .title-important{
+    font-size:clamp(3rem, 6vw, 5rem);
+    letter-spacing:-.045em;
+  }
+  .summary-list{
+    margin-top:24px; padding-left:0; list-style:none; font-size:1.02rem; color:var(--ink);
+    display:grid; gap:12px;
+  }
+  .summary-list li{
+    padding:14px 18px; border-radius:14px; background:rgba(255,255,255,.92);
+    border:1px solid rgba(34,77,129,.12); box-shadow:0 14px 30px rgba(16,27,42,.04);
+  }
+  .summary-list li strong{display:block; font-family:var(--f-display); font-size:1.05rem; color:var(--accent); margin-bottom:4px;}
+  .summary-note{margin-top:20px; font-size:1rem; color:var(--muted); line-height:1.7;}
   .cover .meta-row{
     margin-top:46px; display:flex; gap:36px; flex-wrap:wrap;
     font-family:var(--f-mono); font-size:.78rem; color:var(--muted);
@@ -509,7 +523,7 @@
   <section class="slide cover" data-season="">
     <div class="slide-inner">
       <p class="eyebrow reveal d1">Exposé · Machine Learning</p>
-      <h1 class="title reveal d2">Quels produits vendre, et quand ?</h1>
+      <h1 class="title reveal d2">EXPOSE ML GROUPE N°4</h1>
       <h2 class="subtitle reveal d2">Prédire les ventes saisonnières par l'intelligence artificielle — marketing et commerce au Congo‑Brazzaville</h2>
       <p class="lead reveal d3">Modèle <b>Random Forest</b> entraîné sur des données réelles de vente des marchés de Brazzaville.</p>
       <div class="meta-row reveal d4">
@@ -534,22 +548,39 @@
     </div>
   </section>
 
-  <!-- 2. INTRODUCTION -->
+  <!-- 2. SOMMAIRE -->
+  <section class="slide" data-season="all">
+    <div class="slide-inner">
+      <p class="eyebrow reveal d1">Sommaire</p>
+      <h1 class="title reveal d2 title-important">Plan de l'exposé</h1>
+      <ul class="summary-list reveal d3">
+        <li><strong>Introduction</strong> : contexte et enjeux du commerce congolais.</li>
+        <li><strong>Problématique</strong> : comment prédire les ventes saisonnières.</li>
+        <li><strong>Objectifs</strong> : général et spécifiques.</li>
+        <li><strong>Méthodologie</strong> : jeu de données et modèle Random Forest.</li>
+        <li><strong>Analyse</strong> : résultats, interprétation et visualisations.</li>
+        <li><strong>Conclusion</strong> : bénéfices, limites et perspectives.</li>
+      </ul>
+      <p class="summary-note reveal d4">Ce sommaire suit le fil de l'exposé et permet de situer chaque partie dans la présentation complète.</p>
+    </div>
+  </section>
+
+  <!-- 3. INTRODUCTION -->
   <section class="slide" data-season="">
     <div class="slide-inner">
       <p class="eyebrow reveal d1">Introduction</p>
-      <h1 class="title reveal d2">Le commerce en ligne change de visage à Brazzaville</h1>
+      <h1 class="title title-important reveal d2">Le commerce en ligne change de visage à Brazzaville</h1>
       <p class="lead reveal d3">De plus en plus de vendeurs congolais proposent leurs produits en ligne — vêtements, électroménager, produits alimentaires, fournitures scolaires. Mais une question revient sans cesse : <b>quel produit mettre en avant, et à quel moment de l'année ?</b></p>
       <p class="lead reveal d4">Aujourd'hui, ces décisions reposent surtout sur l'expérience et l'intuition des vendeurs. Résultat : du stock invendu hors-saison, et des ruptures au pire moment — juste quand la demande explose.</p>
       <p class="lead reveal d5">Le Machine Learning peut transformer ces données de vente passées en <b>recommandations concrètes</b> pour anticiper la demande saisonnière.</p>
     </div>
   </section>
 
-  <!-- 3. PROBLEMATIQUE -->
+  <!-- 4. PROBLEMATIQUE -->
   <section class="slide" data-season="all">
     <div class="slide-inner">
       <p class="eyebrow reveal d1">Développement · Problématique</p>
-      <p class="quote reveal d2">Comment prédire, à l'avance, le niveau de vente d'un produit selon la saison — pour aider les e‑commerçants congolais à mieux planifier leurs stocks et leurs campagnes marketing ?</p>
+      <p class="quote reveal d2 title-important">Comment prédire, à l'avance, le niveau de vente d'un produit selon la saison — pour aider les e‑commerçants congolais à mieux planifier leurs stocks et leurs campagnes marketing ?</p>
     </div>
   </section>
 
@@ -790,7 +821,7 @@
   <section class="slide" data-season="all">
     <div class="slide-inner">
       <p class="eyebrow reveal d1">Conclusion</p>
-      <h1 class="title reveal d2">Ce que ce modèle apporte au commerce congolais</h1>
+      <h1 class="title title-important reveal d2">Ce que ce modèle apporte au commerce congolais</h1>
       <p class="lead reveal d3">Avec <b>73,3 % d'accuracy</b> sur des données jamais vues, le modèle confirme que la saison, le mois et les promotions pèsent réellement sur le niveau de vente — exactement ce que notre problématique cherchait à vérifier. Concrètement : anticiper les bottes en caoutchouc avant les pluies, la crème solaire en saison sèche, les uniformes à la rentrée, le poulet congelé pour les fêtes.</p>
       <p class="lead reveal d4">Limites : dataset propre à Brazzaville (2022–2024) et les ventes faibles restent plus difficiles à détecter. Prochaines étapes : élargir à d'autres villes, intégrer des données en temps réel, et connecter le modèle à une boutique en ligne pour des recommandations automatiques de stock.</p>
     </div>
